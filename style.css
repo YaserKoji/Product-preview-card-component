@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Green1: hsl(158, 36%, 37%);
+  --Green2: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  max-width: 35.25rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.img_div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.write_div {
+  background-color: var(--White);
+  height: 100%;
+  width: 100%;
+  padding: 1.875rem;
+}
+
+.price_div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.first_p {
+  font-size: 0.6875rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Grey);
+  margin-bottom: 1.125rem;
+  letter-spacing: 0.25rem;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 1.7rem;
+  color: var(--Black);
+  margin-bottom: 1.125rem;
+  line-height: 1.7rem;
+}
+
+.second_p {
+  font-size: 0.6875rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Grey);
+  margin-bottom: 1.125rem;
+  line-height: 1.125rem;
+}
+
+.p1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Green1);
+  font-family: "Fraunces", serif;
+  margin-right: 0.9375rem;
+  display: inline-block;
+}
+
+.p2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--Grey);
+  font-size: 0.6875rem;
+  display: inline-block;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: var(--Green1);
+  width: 100%;
+  border-radius: 0.625rem;
+  height: 2.5rem;
+  border: none;
+  transition: 0.3s;
+  color: var(--White);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--Green2);
+  cursor: pointer;
+}
+
+@media (max-width: 35.9375em) {
+  main {
+    grid-template-columns: 1fr;
+    max-width: 21.875rem;
+    margin: 1.25rem;
+  }
+
+  .img_div img {
+    height: 21.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}
